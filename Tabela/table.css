@@ -1,0 +1,169 @@
+﻿/* table */
+.table{
+ font-family: verdana;
+ font-size: 11px;
+ text-transform:uppercase;
+ color: #222;
+ border-spacing: 0px; 
+ width: 100%;
+}
+
+.table tr:not(.row-responsive) td{
+  padding: 1px 10px;
+  border-bottom: solid 1px silver;
+  white-space: nowrap;
+}
+
+.table thead tr:last-child td{
+ font: bold 10px/14px sans-serif;
+}
+/* table */
+
+
+/* table: order */
+.table thead tr:last-child td:not(blank){
+ cursor: pointer;
+}
+
+.table thead tr:last-child td:not(.blank)::after{
+ font-size: 18px;
+ vertical-align: middle;
+ content: '▾';
+ color: whitesmoke;
+}
+
+.table thead tr td.asc:not(.blank)::after{
+ content: '▾';
+ color: orange;
+}
+
+.table thead tr td.desc:not(.blank)::after{
+ content: '▴';
+ color: orange;
+}
+/* table: order */
+
+
+/* table: responsive */
+.table thead tr td.blank,
+.table tbody tr td.responsive,
+.table tbody tr td.select{
+ width:1%;
+ padding: 0px 5px;
+}
+
+.table tbody tr td.responsive::after{
+ content: '✚';
+ color: white;
+ background-color: grey;
+ padding: 0 5px;
+}
+
+.table tbody tr td.responsive.expand::after{
+ content: '▬';
+ background-color: orange;
+ padding: 0 4px;
+}
+
+.table-expand{
+ font-family: verdana;
+ font-size: 10px;
+ text-transform:uppercase;
+ color: #222;
+ border-spacing: 0px; 
+ width: 100%;
+}
+
+.table tr.row-responsive td{
+  padding: 5px 5px;
+  border-bottom: solid 1px whitesmoke;
+  white-space: nowrap;
+  background: white;
+}
+
+.table tr.row-responsive table tr td:nth-child(1){
+  font-size: 9px;
+  color: black;
+}
+
+.table tr.row-responsive table tr td:nth-child(2):before{
+  content:": "
+}
+/* table: responsive */
+
+
+
+/* table: select */
+.table tr td.select input{
+ height: 11px;
+}
+
+.table tbody tr:nth-child(odd of tr:not(.row-responsive)){
+ background-color: #fafafa;
+}
+
+.table tbody tr:hover{
+ background-color: whitesmoke !important; 
+}
+/* table: select */
+
+
+
+
+
+
+
+/* table: paging */
+.table-paging *{
+ font:11px verdana;
+ text-transform: capitalize;
+}
+
+.table-paging .buttons{
+ text-align: right;
+}
+
+.table-paging .buttons button{
+ border: none;
+ background: none;
+ cursor: pointer;
+}
+
+.table-paging .buttons button.selected{
+ background: orange;
+ color: black;
+}
+
+.table-paging .buttons button:not(:disabled,.selected):hover{
+ background: whitesmoke;
+}
+/* table: paging */
+
+
+
+/* table-tools */
+.table-tools{
+ width: 100%;
+ background: whitesmoke;
+}
+
+.table-tools input,
+.table-tools select{
+ background: white;
+ border: none;
+ color: grey;
+ outline: none;
+ width: -webkit-fill-available; 
+ height:26px;
+ line-height:26px;
+ text-indent: 5px;
+ font-size: 12px !important;
+}
+
+.table-tools input{
+ font-size: 10px !important;
+ text-transform: uppercase;
+}
+/* table-tools */
+
+
